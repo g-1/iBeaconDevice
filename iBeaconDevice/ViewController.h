@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@import CoreBluetooth;
+@import CoreLocation;
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<CBPeripheralManagerDelegate>
 
 
 @end

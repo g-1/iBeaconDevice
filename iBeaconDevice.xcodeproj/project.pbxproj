@@ -40,6 +40,8 @@
 		3BAACAAE1A73847100C6CEF5 /* iBeaconDeviceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iBeaconDeviceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BAACAB31A73847100C6CEF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BAACAB41A73847100C6CEF5 /* iBeaconDeviceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iBeaconDeviceTests.m; sourceTree = "<group>"; };
+		3BAACABE1A73892E00C6CEF5 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		3BAACAC01A73955400C6CEF5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,8 @@
 		3BAACA8C1A73847100C6CEF5 = {
 			isa = PBXGroup;
 			children = (
+				3BAACAC01A73955400C6CEF5 /* CoreLocation.framework */,
+				3BAACABE1A73892E00C6CEF5 /* CoreBluetooth.framework */,
 				3BAACA971A73847100C6CEF5 /* iBeaconDevice */,
 				3BAACAB11A73847100C6CEF5 /* iBeaconDeviceTests */,
 				3BAACA961A73847100C6CEF5 /* Products */,
@@ -168,6 +172,7 @@
 				TargetAttributes = {
 					3BAACA941A73847100C6CEF5 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = GP3C6S7978;
 					};
 					3BAACAAD1A73847100C6CEF5 = {
 						CreatedOnToolsVersion = 6.1;
@@ -345,9 +350,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iBeaconDevice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -355,9 +363,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iBeaconDevice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
