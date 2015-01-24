@@ -8,13 +8,14 @@
 
 #import "ViewController.h"
 
-NSString* const	kUUIDString	= @"B9407F30-F5F8-466E-AFF9-25556B57FE6D";
+NSString* const	kUUIDString	= @"9D46B74B-AE5B-4CEA-965D-D3C4EEC89D3C"; //made by uuidgen
 
 @interface ViewController ()
 @property (nonatomic) CBPeripheralManager* peripheralManager;
 @property (nonatomic, weak) IBOutlet UILabel* uuidText;
 @property (nonatomic, weak) IBOutlet UITextField* majorText;
 @property (nonatomic, weak) IBOutlet UITextField* minorText;
+@property (nonatomic, weak) IBOutlet UIButton* buttonStart;
 
 - (IBAction)tapStartBecon:(id)sender;
 
@@ -72,6 +73,9 @@ NSString* const	kUUIDString	= @"B9407F30-F5F8-466E-AFF9-25556B57FE6D";
 - (IBAction)tapStartBecon:(id)sender
 {
   [self beaconing];
+  
+  [self.buttonStart setTitle:@"発信中" forState:UIControlStateNormal];
+  [self.buttonStart setEnabled:NO];
 }
 
 

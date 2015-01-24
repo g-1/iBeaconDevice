@@ -51,11 +51,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiB-vM-Mjf">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiB-vM-Mjf">
                                 <rect key="frame" x="32" y="207" width="172" height="30"/>
                                 <state key="normal" title="ビーコン発信"/>
                                 <connections>
-                                    <action selector="tapStartBecon:" destination="BYZ-38-t0r" eventType="touchDown" id="gDZ-g6-anC"/>
+                                    <action selector="tapStartBecon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WBm-zX-rwa"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="uuid" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EG-JN-0Hd">
@@ -74,6 +74,8 @@
                             <constraint firstItem="MmN-HE-5tk" firstAttribute="leading" secondItem="ss1-Zc-ONX" secondAttribute="trailing" constant="31" id="DUy-ND-hIA"/>
                             <constraint firstItem="U4S-v8-7PH" firstAttribute="top" secondItem="ss1-Zc-ONX" secondAttribute="bottom" constant="28" id="I27-OP-QnY"/>
                             <constraint firstItem="OmW-QS-gMS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="42" id="Mak-s8-asu"/>
+                            <constraint firstAttribute="centerX" secondItem="oiB-vM-Mjf" secondAttribute="centerX" id="Rvx-dt-WYc"/>
+                            <constraint firstItem="oiB-vM-Mjf" firstAttribute="top" secondItem="gih-pT-WJV" secondAttribute="bottom" constant="26" id="Wsx-Yw-GbV"/>
                             <constraint firstItem="gih-pT-WJV" firstAttribute="leading" secondItem="U4S-v8-7PH" secondAttribute="trailing" constant="32" id="YJQ-o2-TPx"/>
                             <constraint firstItem="U4S-v8-7PH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="i5n-gK-Ees"/>
                             <constraint firstItem="OmW-QS-gMS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="lCi-Ty-2im"/>
@@ -85,6 +87,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonStart" destination="oiB-vM-Mjf" id="rTc-c6-DU7"/>
                         <outlet property="majorText" destination="MmN-HE-5tk" id="BAl-01-j4K"/>
                         <outlet property="minorText" destination="gih-pT-WJV" id="KMF-Xn-OV5"/>
                         <outlet property="uuidText" destination="1EG-JN-0Hd" id="tgv-vp-Onl"/>
